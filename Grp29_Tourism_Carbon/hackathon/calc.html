@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carbon Footprint Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url("https://t4.ftcdn.net/jpg/06/80/32/55/360_F_680325553_gaRmfyCWzxs883EvapH4qrNJRuI4VWUG.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            border-color: black;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        select {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            background-image: url("down_arrow.png");
+            background-size: 15px;
+            background-repeat: no-repeat;
+            background-position: calc(100% - 10px) center;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .transport-options {
+            display: none;
+        }
+
+        .subtypes {
+            margin-top: 10px;
+        }
+    </style>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <!-- Add any additional stylesheets or libraries you need -->
+</head>
+<body>
+    <div class="container">
+        <h1>Carbon Footprint Calculator</h1>
+        <form action="{{ url_for('predict') }}" method="post">
+            <div class="form-group">
+                <label for="source">Source:</label>
+                <input type="text" id="source" name="source" required>
+            </div>
+            <div class="form-group">
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required>
+            </div>
+            <div class="form-group">
+                <label for="distance">Distance</label>
+                <input type="number" id="distance" name="distance" required>
+            </div>
+            <div class="form-group">
+                <label for="fuelEfficiency">Fuel Efficiency</label>
+                <input type="number" id="fuelEfficiency" name="fuelEfficiency" placeholder="Enter fuel efficiency" required>
+            </div>
+            <div class="form-group">
+                <label for="lengthOfStay">Length of Stay</label>
+                <input type="number" id="lengthOfStay" name="lengthOfStay" placeholder="Enter length of stay" required>
+            </div>
+            <div class="form-group">
+                <label for="transport">Mode of Transport:</label>
+                <select id="transport" name="transport" required>
+                    <option value="">Select</option>
+                    <option value="airways">Airways</option>
+                    <option value="waterways">Waterways</option>
+                    <option value="roadways">Roadways</option>
+                </select>
+            </div>
+            <div id="airways-options" class="transport-options">
+                <label for="airways-type">Airways Type:</label>
+                <select id="airways-type" name="airways-type">
+                    <option value="">Select</option>
+                    <option value="aeroplane">Aeroplane</option>
+                    <option value="helicopter">Helicopter</option>
+                </select>
+            </div>
+            <div id="waterways-options" class="transport-options">
+                <label for="waterways-type">Waterways Type:</label>
+                <select id="waterways-type" name="waterways-type">
+                    <option value="">Select</option>
+                    <option value="cargo-ship">Cargo Ship</option>
+                    <option value="passenger-ship">Passenger Ship</option>
+                </select>
+            </div>
+            <div id="roadways-options" class="transport-options">
+                <label for="roadways-type">Roadways Type:</label>
+                <select id="roadways-type" name="roadways-type">
+                    <option value="">Select</option>
+                    <option value="bus">Bus</option>
+                    <option value="train">Train</option>
+                    <option value="car">Car</option>
+                </select>
+            </div>
+            <div id="bus-subtypes" class="subtypes">
+                <label for="bus-subtype">Bus Subtype:</label>
+                <select id="bus-subtype" name="bus-subtype">
+                    <option value="">Select</option>
+                    <option value="mini-bus">Mini-Bus</option>
+                    <option value="volvo-55">Volvo-55</option>
+                </select>
+            </div>
+            <div id="car-subtypes" class="subtypes">
+                <label for="car-subtype">Car Subtype:</label>
+                <select id="car-subtype" name="car-subtype">
+                    <option value="">Select</option>
+                    <option value="hatchback">Hatchback</option>
+                    <option value="mid-size-suv">Mid-size SUV</option>
+                    <option value="suv">SUV</option>
+                </select>
+            </div>
+            <div class="form-group">
+              <label for="stops">Number of Stops:</label>
+              <input type="number" id="stops" name="stops" min="0">
+          </div>
+            <div class="form-group">
+                <label>Meal Breaks:</label><br>
+                <input type="checkbox" id="meal-break" name="meal-break" value="meal">
+                <label for="meal-break">Dinner/Lunch/Breakfast</label><br>
+            </div>
+            <div id="meal-options" class="subtypes">
+                <label for="meal-type">Select Restaurant Type:</label>
+                <select id="meal-type" name="meal-type">
+                    <option value="">Select</option>
+                    <option value="fsr">FSR (Full Service Restaurant)</option>
+                    <option value="qsr">QSR (Quick Service Restaurant)</option>
+                </select>
+                <div id="qsr-options" class="subtypes">
+                    <label for="qsr-chain">Select QSR Chain:</label>
+                    <select id="qsr-chain" name="qsr-chain">
+                        <option value="">Select</option>
+                        <option value="dominos">Dominos</option>
+                        <option value="mcdonalds">McDonald's</option>
+                        <option value="kfc">KFC</option>
+                        <option value="burger-king">Burger King</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="washroom-break" name="washroom-break" value="washroom">
+                <label for="washroom-break">Washroom Break</label><br>
+            </div>
+            <div class="form-group">
+                <input type="checkbox" id="rest-break" name="rest-break" value="rest">
+                <label for="rest-break">Rest Break</label><br>
+            </div>
+            <div id="rest-options" class="subtypes">
+                <label for="stay-type">Type of Stay:</label>
+                <select id="stay-type" name="stay-type">
+                    <option value="">Select</option>
+                    <option value="hotel">Hotel</option>
+                    <option value="bungalow">Bungalow</option>
+                    <option value="zostel">Zostel</option>
+                    <!-- Add more options as needed -->
+                </select>
+                <label for="stay-duration">Duration of Stay:</label>
+                <input type="number" id="stay-duration" name="stay-duration" min="1">
+            </div>
+            <button type="submit">Predict <i class="zmdi zmdi-arrow-right"></i></button>
+        </form>
+        <br>
+        <br>
+        {{ prediction_text }}
+    </div>
+   

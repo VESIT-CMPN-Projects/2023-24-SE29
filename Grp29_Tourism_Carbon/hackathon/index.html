@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C-calc</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+
+      .grid-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        margin: 50px 70px;
+        gap:45px 15px;
+
+      } 
+
+      .img1{
+        grid-area: 1/1/3/3;
+      }
+
+      .img2{
+        grid-area: 3/4/5/6;
+      }
+     
+      .img3{
+        grid-area: 5/1/7/3;
+      }
+
+      .cont1{
+        grid-area: 1/3/3/6;
+      }
+
+      .cont2{
+        grid-area: 3/1/5/4;
+    }
+
+      .cont3{
+        grid-area: 5/3/7/6;
+      }
+
+      .para{
+        font-size: x-large;
+
+      }
+
+
+  
+    .form {
+      text-align: center;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin: auto;
+    }
+  
+  
+</style>
+    
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="E:/hackathon/hackathon/CF_logo-removebg-preview.png" alt="Logo" height="39"></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search for Reviews"
+              aria-label="Search"
+            />
+            
+            <a href="http://127.0.0.1:5000" class="btn btn-outline-secondary">Calculate</a>
+            <a href="suggestions.html" class="btn btn-outline-info">Suggestions</a>
+            <a href="login.html" class="btn btn-outline-success">SignUp</a>
+    
+    
+          </form>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="heroSection">
+      <div class="upper_hero">
+        <h1 class="text_heading">
+          <span class="spanText">I</span>ndia's #<span class="spanText">1</span>
+          <span class="spanText">C</span>arbon 
+          <span class="spanText">F</span>ootprint 
+          <span class="spanText">C</span>alculator
+        </h1>
+      </div>
+    </div>
+
+   <div class="form">
+        <h2> Login</h2>
+        <div class="mobile-number">
+          <label for="phone-no" class="phone"
+            ><i class="fa-solid fa-phone"></i
+          ></label>
+          <input type="tel" placeholder="Mobile Number" id="phone-no" />
+        </div>
+        <button class="login"> login </button>
+      </div>
+    </div>
+
+    
+    <div class="grid-container">
+      <div class="img1">
+        <img src="Sus-trav.png" alt="image" width="440px" height="420px">
+      </div>
+      <div class="cont1">
+        <h2>How Travel is Contributing to the Climate Emergency</h2>
+
+        <p class="para">
+          Tourism is responsible for roughly 8% of the world’s carbon emissions. From plane flights and boat rides to souvenirs and lodging, various activities contribute to tourism’s carbon footprint. The majority of this footprint is emitted by visitors from high-income countries, with U.S. travelers at the top of the list. As the number of people who can afford to travel grows, so will tourism’s environmental footprint.
+        </p>
+
+      </div>
+      <div class="img2">
+        <img src="emm-trans.png" alt="image" width="440px" height="420px">
+      </div>
+      <div class="cont2">
+
+        <h2>Transport</h2>
+
+        <p class="para">
+          Today, transportation is tourism’s main source of greenhouse gas emissions. On average, planes and cars generate the most CO2 per passenger mile, with tour buses, ferries, and trains coming well behind. In recent years, the number of people traveling internationally skyrocketed as airfare became more affordable. Similarly, between 2005 and 2016, transport-related tourism emissions increased by more than 60%.
+        </p>
+      </div>
+
+
+
+
+      <div class="img3">
+        <img src="lodge.png" alt="image" width="440px" height="420px">
+      </div>
+      <div class="cont3">
+
+        <h2>Lodging</h2>
+
+        <p class="para">
+          Many accommodations rely on heating and air conditioning to keep guest rooms at a pleasant temperature in hot or cold climates. These energy-intensive systems create CO2, as do the water heaters used to warm showers, pools, and spas.Emissions from lodging tend to be highest in resorts and hotels that offer modern services, while smaller lodgings such as homestays and guest houses have lower emissions for the most part.
+        </p>
+
+      </div>
+  
+    </div>
+
+
+   <div class="container">
+  <h1 class="customer-reviews">Our Customer Reviews</h1>
+  <!-- Your customer reviews content here -->
+</div>
+    <div class="row">
+      <!-- Container for the first row -->
+      <div class="center-cards">
+        <div class="cards">
+          <!-- First Row -->
+          <div class="card1">
+            <!-- Card 1 -->
+            <div class="bg-image">
+              <img
+                src="./attractive-business-lady-office-formal-clothes-eyeglasses-holding-pen-looking-away-dreaming-smiling-working-75804050.webp"
+                alt=""
+                class="cardimage"
+              />
+            </div>
+            <h3>Ishwari Dehadray</h3>
+            <p class="card-desc">
+            "I've been using this website for a few months now, and it's been eye-opening! It's helped me understand my carbon footprint better and motivated me to make positive changes in my lifestyle.
+            </p>
+          </div>
+
+          <div class="card1">
+            <!-- Card 2 -->
+            <div class="bg-image">
+              <img src="./person.jpg" alt="" class="cardimage" />
+            </div>
+            <h3>Parth Takale</h3>
+            <p class="card-desc">
+              "The carbon footprint calculator on this site is incredibly easy to use. It's made me more conscious of my daily habits and their environmental impact. 
+            </p>
+          </div>
+
+          <div class="card1">
+            <!-- Card 3 -->
+            <div class="bg-image">
+              <img
+                src="./Premium-Managed-IT-Service-Wellingborough.jpg"
+                alt=""
+                class="cardimage"
+              />
+            </div>
+            <h3>Prem Gundhiyal</h3>
+            <p class="card-desc">
+             "This website has been a game-changer for me. It's not just about calculating your carbon footprint; it offers practical tips and solutions to help you lower it.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <!-- Container for the second row -->
+      <div class="center-cards">
+        <div class="cards2">
+          <!-- Second Row -->
+          <div class="card1">
+            <!-- Card 4 -->
+            <div class="bg-image">
+              <img src="O.jpeg" alt="" class="cardimage" />
+            </div>
+            <h3>Dipesh Patel</h3>
+            <p class="card-desc">
+              "As someone who's always been concerned about the environment, this website has become my go-to resource. It's informative, user-friendly, and has motivated me to adopt greener habits
+            </p>
+          </div>
+
+          <div class="card1">
+            <!-- Card 5 -->
+            <div class="bg-image">
+              <img src="OIP.jpeg" alt="" class="cardimage" />
+            </div>
+            <h3>Parth Udole<h3>
+            <p class="card-desc">
+             "I stumbled upon this website while searching for ways to live a more sustainable lifestyle, and I'm so glad I did. The information provided here is comprehensive, and the community aspect is inspiring
+            </p>
+          </div>
+
+          <div class="card1">
+            <!-- Card 6 -->
+            <div class="bg-image">
+              <img src="s1.jpg" alt="" class="cardimage" />
+            </div>
+            <h3>Adway Somani</h3>
+            <p class="card-desc">
+             "I've been using this website with my students to teach them about environmental responsibility, and it's been a hit!
+            </p>
+          </div>
+        </div>
+      </div>
+     
+      <div class="footer">
+<div class="row1  rowss">
+<a href="#" class="anchor  icons"><i class="fa fa-facebook"></i></a>
+<a href="#" class="anchor icons"><i class="fa fa-instagram"></i></a>
+<a href="#" class="anchor icons" ><i class="fa fa-youtube"></i></a>
+<a href="#" class="anchor icons"><i class="fa fa-twitter"></i></a>
+</div>
+
+<div class="row2 rowss">
+<ul >
+<li><a href="#" class="anchor">Contact us</a></li>
+<li><a href="#" class="anchor">Our Services</a></li>
+<li><a href="#" class="anchor">Privacy Policy</a></li>
+<li><a href="#" class="anchor">Terms & Conditions</a></li>
+
+</ul>
+</div>
+
+<div class="row2 rowss">
+ All rights reserved || Designed By: Team
+</div>
+</div>
+</footer>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+window.embeddedChatbotConfig = {
+chatbotId: "5N1dygMDufRFlxB64walU",
+domain: "www.chatbase.co"
+}
+</script>
+<script
+src="https://www.chatbase.co/embed.min.js"
+chatbotId="5N1dygMDufRFlxB64walU"
+domain="www.chatbase.co"
+defer>
+</script>
+  </body>
+</html>

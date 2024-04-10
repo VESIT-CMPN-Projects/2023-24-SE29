@@ -1,0 +1,309 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  /* overflow-x: hidden; */
+}
+
+.upper_hero {
+  display: flexbox;
+  align-items: center;
+}
+
+#t1 {
+  font-size: 60px;
+}
+
+.spanText {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.cards {
+  display: flex;
+  gap: 0rem;
+  align-content: center;
+}
+
+.cards2 {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardimage {
+  /* position: relative; */
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.card1 {
+  padding: 1rem;
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 1rem;
+  box-shadow: rgba(54, 53, 53, 0.24) 0px 3px 8px;
+  justify-content: center;
+  align-items: center;
+  transform: scale(0.8);
+  /* opacity: 0; */
+  z-index: -1;
+  animation: fadeInScale 1s ease-out forwards; /* Apply the fade-in and scale animation */
+}
+
+.text_heading {
+  margin-top: 3rem;
+  text-align: center;
+  color: rgb(57, 138, 52);
+  padding-left: 20px;
+  padding-top: 48px;
+  /* opacity: 0; */
+  transform: scale(0.1);
+  animation: fadeInScale 1s ease 0.5s forwards; /* Apply the fade-in and scale animation with a delay */
+}
+
+.cards:hover {
+  transition-duration: 3ms;
+  transition: smooth;
+}
+
+.card-desc {
+  font-weight: 800;
+  /* font-size: 800; */
+  font-size: 16px;
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
+  color: rgb(141, 125, 125);
+}
+
+.navbar {
+  box-shadow: rgba(111, 108, 108, 0.24) 0px 3px 8px;
+  /* overflow: hidden; */
+  background-color: #d0ecea;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+.heading {
+  /* font-size: 19px; */
+  color: rgb(43, 37, 37);
+  letter-spacing: 1px;
+}
+
+.heading-footer {
+  color: #aaa0a0;
+}
+
+.forum {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form {
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid black; */
+  border-radius: 2rem;
+}
+
+#phone-no {
+  background-color: transparent;
+  border: 0px solid;
+  border-radius: 0.4rem;
+  box-shadow: rgba(241, 240, 240, 0.25) 0px 30px 60px -12px inset,
+    rgba(185, 182, 182, 0.3) 0px 18px 36px -18px inset;
+  height: 20px;
+  width: 23rem;
+  color: #ccc;
+  padding: 1rem;
+}
+
+#phone-no::placeholder {
+  font-size: 20px;
+  text-align: center;
+}
+
+.login {
+  background-color: rgb(71, 96, 71);
+  padding: 0.6rem;
+  /* width: 10rem; */
+  border-radius: 1rem;
+  margin-top: 1rem;
+  color: #ffffff;
+}
+
+.login:hover {
+  background-color: green;
+}
+
+.center-cards {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust as needed */
+}
+
+.cards,
+.cards2 {
+  display: flex;
+  justify-content: space-between; /* To evenly distribute space between the cards */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line if necessary */
+}
+
+.mid-hero {
+  text-align: center;
+  font-weight: 600;
+  color: green;
+}
+
+.phone {
+  width: 2.2rem;
+  height: 2.2rem;
+}
+.companylogo {
+  background: transparent;
+  margin: auto;
+  width: 80%;
+}
+
+.footer {
+  padding: 1rem 3rem 1rem 3rem;
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 2rem;
+}
+
+.row2 {
+  color: #3b2e2e;
+  /*  */
+}
+
+.row2 ul {
+  display: flex;
+  gap: 1rem;
+}
+
+.row1 {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.row1 a {
+  width: 2rem;
+  height: 2rem;
+  /* border: 1px solid blue; */
+  text-align: center;
+  text-decoration: none;
+}
+
+.anchor {
+  text-decoration: none;
+  color: #d2c6c6;
+}
+.rowss:hover {
+  color: white;
+  transition: 0.5s ease;
+}
+
+.icons {
+  color: #362b2b;
+}
+
+.icons:hover {
+  color: #ffffff;
+  transition: 2ms ease;
+}
+body {
+  font-family: Arial, sans-serif;
+}
+.container {
+  text-align: center;
+  margin-top: 50px; /* Adjust as needed */
+}
+.customer-reviews {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+/* .form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  margin: 0 auto;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+.mobile-number {
+  position: relative;
+  margin-bottom: 20px;
+}
+.phone {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+}
+input[type="tel"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+.login {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+.login:hover {
+  background-color: #0056b3;
+} */
+
+.nav {
+  display: flex;
+  justify-content: gri-end;
+  gap: 10px; /* Adjust the space between buttons */
+}
+
+.navbar a {
+  margin-left: 10px; /* Adjust margin between buttons */
+}
